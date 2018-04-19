@@ -125,7 +125,7 @@ h3 {
 
 span.plusMinus {
   padding: 0 0 0 1.5em;
-  color: #0d0d0d;
+  color: #3973AC;
   font-size: 24px;
 }
 
@@ -147,7 +147,8 @@ h1 {
 input {
   border: none;
   background-color: #404040;
-  color: powderblue;
+  color: whitesmoke;
+  font-weight: bold;
   padding: 0.25em;
   opacity: 0.8;
 }
