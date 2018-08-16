@@ -34,16 +34,16 @@ function initFuncs() {
     function randomWord() {
 
       var getString = ins[0].value;
-      var bPos = getString.indexOf("bomasha");
+      var bPos = getString.indexOf("#");
       var nPos;
       var getDigit;
       var getSyllables;
       var replaceMe;
 
       if (bPos != -1) {
-        nPos = bPos + 7;
+        nPos = bPos + 1;
         getDigit = getString.charAt(nPos);
-        replaceMe = "bomasha" + getDigit;
+        replaceMe = "#" + getDigit;
         getSyllables = Number(getDigit);
 
        if (isNaN(getSyllables) || getSyllables == 0) {
