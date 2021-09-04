@@ -1,67 +1,89 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>
+     bladesymbillll | syllablemill | illslymeball
+  </title>
 
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="syllablemill-style.css"/>
 
 
-<title>
-  Syllable Mill
-</title>
-<link rel="stylesheet" href="mezclarstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"/>
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+
+  <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
 
 </head>
 
 <body>
-  <div class="flexOuterCenter">
-    <!--
-  <header>
-    Syllable Mill
-  </header>
--->
-</div>
-  <div class="flexOuterCenter" id="header">
-    <div class="linkLike">
-      <a href="https://github.com/geoSkogen/syllablemill">source</a>
-    </div>
-    <div class="linkLike">
-      <a href="http://geoskogen.github.io/josephscoggins/">home</a>
-    </div>
-  </div>
-  <div class="flexOuterCenter">
-    <article class="getIt">
-      <div class="flexOuterSpace">
-        <input id="stringMe" type="text" length="20"/>
-        <button>enter</button>
-      </div>
-      <p id = "output1">&nbsp;</p>
-      <p id = "output2"></p>
+  <div id="app">
+
+    <header id="sm-header">
+      <h1 id="sm-title">Syllable Mill</h1>
+      <h2 class="newsprint" id="sm-lorem"></h2>
+    </header>
+
+    <article id="sm-wrapper" class="flex-row flex-center">
+      <section class="sm-section">
+
+        <h3 class="section-header">word generator</h3>
+        <div class="block-label">syllables
+          <input type="number" min="1"  id="sm-syllable-count" name="syllable-count" class="roomy digits sm-set-go" value="3"/>
+        </div>
+        <div class="flex-row flex-center">
+          <div class="fake-button">get word</div>
+        </div>
+      </section>
+      <section class="sm-section">
+
+        <h3 class="section-header">text generator</h3>
+
+        <div id="params-wrapper" class="flex-row flex-center">
+          <div class="block-label">syllables cap
+            <input type="number" min="1"  id="syllable-cap" name="syllable-cap" class="roomy digits sm-select-go" value="5"/>
+          </div>
+          <div class="block-label">words cap
+            <input type="number" min="1"  id="word-cap" name="word-cap" class="roomy digits sm-select-go" value="25"/>
+          </div>
+          <div class="block-label">phrases cap
+            <input type="number" min="1"  id="phrase-cap" name="phrase-cap" class="roomy digits sm-select-go" value="9"/>
+          </div>
+        </div>
+
+        <div class="block-label flex-row flex-center">paragraphs
+          <input type="number" min="1"  id="p-count" name="p-count" class="roomy digits sm-select-go" value="1"/>
+        </div>
+        <div class="flex-row flex-center">
+          <div class="fake-button">get text</div>
+        </div>
+      </section>
+      <section class="sm-section flex-row flex-center">
+
+        <div class="relshell">
+          <div id="modal">
+            <div class="flex-row flex-end"><div id="close-modal">&times;</div></div>
+            <div class="flex-row flex-end"><i id="clipboard-icon" class="fa fa-clipboard"></i></div>
+            <textarea id="sm-output" class="roomy block newsprint"></textarea>
+          </div>
+        </div>
+
+      </section>
+
     </article>
-  </div>
-  <div class="flexOuterCenter">
-    <article class="getItSmaller">
-      <div class="flexOuterLeft"><span class="plusMinus">+</span>
-        <h3>how you do this<h3></div>
-    </article>
-  </div>
-  <div class="flexOuterCenter">
-    <!--<div class="hidden">-->
-    <article class="getItSmaller" id="hideMe">
-          <p>Enter some text.</p>
-          <p>If it contains a hashtag&mdash;'#'&mdash;it'll be replaced by a
-          randomly created word, with a random
-            number of syllables.&nbsp;&nbsp;</p>
-         <p>If you add on a number no greater than 9 like '#5', you will
-            get a created word of as many syllables.</p>
-          <p>Words should be mostly pronouncable.</p>
-    </article>
-  <!--</div>-->
+
   </div>
 </body>
-
+<script type="application/javascript" src="syllablemill.js"></script>
+<script type="application/javascript" src="frontend.js"></script>
 </html>
-
-<script src="syllableMill.js">
-</script>
