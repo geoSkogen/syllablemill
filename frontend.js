@@ -7,6 +7,7 @@ const dominator = {
   modal : document.querySelector('#modal'),
   buttons : document.querySelectorAll('.fake-button'),
   close_modal : document.querySelector('#close-modal'),
+  clipboard : document.querySelector('#clipboard-icon'),
   sections : document.querySelectorAll('.sm-section')
 }
 
@@ -64,4 +65,12 @@ dominator.param_cap_selectors.forEach( (selector) => {
       dominator.text_output_box.innerHTML+= "\t\t" + p + "\r\n\r\n"
     })
   })
+})
+
+dominator.clipboard.addEventListener('click', function () {
+  dominator.text_output_box.select()
+  dominator.text_output_box.setSelectionRange(
+    0, dominator.text_output_box.value.length
+  )
+  document.execCommand('copy');
 })

@@ -94,6 +94,7 @@
 
 #clipboard-icon {
   font-size: 36px;
+  cursor: pointer;
 }
 
 #sm-output {
