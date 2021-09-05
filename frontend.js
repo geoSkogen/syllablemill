@@ -53,7 +53,7 @@ dominator.close_modal.addEventListener('click', function (event) {
 })
 
 dominator.word_generator_select.addEventListener('click', function (event) {
-  dominator.text_output_box.value = get_random_word(Number(this.value))
+  dominator.text_output_box.innerHTML = get_random_word(Number(this.value))
 })
 
 dominator.param_cap_selectors.forEach( (selector) => {
@@ -61,7 +61,7 @@ dominator.param_cap_selectors.forEach( (selector) => {
     let text_arr = forminator.get_random_text(dominator.param_cap_selectors)
     dominator.text_output_box.innerHTML = ''
     text_arr.forEach( (p) => {
-      dominator.text_output_box.innerHTML+= p + "\r\n"
+      dominator.text_output_box.innerHTML+= "\t\t" + p + "\r\n\r\n"
     })
   })
 })
